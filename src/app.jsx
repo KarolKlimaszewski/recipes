@@ -1,6 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import * as firebase from "firebase";
+
+var config = {
+    apiKey: "AIzaSyBsjlucrZLMrrp5eVL2HmFIWntgmEz3QwY",
+    authDomain: "recipesreact.firebaseapp.com",
+    databaseURL: "https://recipesreact.firebaseio.com",
+    projectId: "recipesreact",
+    storageBucket: "recipesreact.appspot.com",
+    messagingSenderId: "19833174599"
+};
+firebase.initializeApp(config);
+
 require('./scss/main.scss');
 
 import {Recipes} from './components/recipes.jsx';
