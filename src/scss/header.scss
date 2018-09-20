@@ -1,0 +1,19 @@
+.header{
+  background: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  padding: 10px 0;
+  background: rgba(255, 255, 255, 0.4);
+}
+.header__logo{
+  width: 64px;
+  height: 64px;
+  background: mix($additional-color, $second-color);
+  border-radius: 0 50%;
+  padding: 10px;
+}
+
+.header__title{
+  color: $main-color;
+}

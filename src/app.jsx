@@ -2,10 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 require('./scss/main.scss');
-//or
-//require('../css/main.css')
 
-import {Hello} from './components/hello.jsx';
+import {Recipes} from './components/recipes.jsx';
 
 class App extends React.Component {
    constructor(props){
@@ -14,7 +12,7 @@ class App extends React.Component {
    }
    render() {
      return (
-     <Hello />
+     <Recipes />
      )
    }
  }
