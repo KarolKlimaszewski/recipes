@@ -10,7 +10,13 @@ export class Recipes extends React.Component {
         super(props);
         this.state = {
             recipes: [],
-            loaded: false
+            loaded: false,
+            title: "",
+            ingredients: "",
+            photo: "",
+            recipeSteps: "",
+            category: "",
+            addRecipeDisplay: "none"
         }
     }
 
@@ -34,7 +40,16 @@ export class Recipes extends React.Component {
     }
 
     handleAddRecipe = () => {
-        console.log("hello")
+        if(this.state.addRecipeDisplay === "none"){
+            this.setState({
+                addRecipeDisplay: "block"
+            })
+        }
+        else{
+            this.setState({
+                addRecipeDisplay: "none"
+            })
+        }
     }
 
     render() {
@@ -74,7 +89,18 @@ export class Recipes extends React.Component {
                     <div className={"container"}>
                         <Header/>
                         {recipes}
-                        <button className="recipe__add">+</button>
+                        <button className="recipe__add" onClick={this.handleAddRecipe}>+</button>
+                        <form className="recipe__form" style={{display: this.state.addRecipeDisplay}}>
+                            <input className={"recipe__form-input"} type="text" placeholder={"Title..."}
+                                   value={this.state.title}
+                                   onChange={this.handleTitleChange}/>
+                            <input className={"recipe__form-input"} type="text" placeholder={"ingredients..."}
+                                   value={this.state.ingredients}
+                                   onChange={this.handleIngredientsChange}/>
+                            <button type={"submit"} className={"addUser__submit"} onClick={this.handleSubmit}>
+                                Submit
+                            </button>
+                        </form>
                     </div>
                 )
             }
@@ -87,7 +113,17 @@ export class Recipes extends React.Component {
                         Your recipes list is empty. Maybe it's time to add some recipes? :)
                     </div>
                     <button className="recipe__add" onClick={this.handleAddRecipe}>+</button>
-
+                    <form className="recipe__form" style={{display: this.state.addRecipeDisplay}}>
+                        <input className={"recipe__form-input"} type="text" placeholder={"Title..."}
+                               value={this.state.title}
+                               onChange={this.handleTitleChange}/>
+                        <input className={"recipe__form-input"} type="text" placeholder={"ingredients..."}
+                               value={this.state.ingredients}
+                               onChange={this.handleIngredientsChange}/>
+                        <button type={"submit"} className={"addUser__submit"} onClick={this.handleSubmit}>
+                            Submit
+                        </button>
+                    </form>
                 </div>
             )
         }
