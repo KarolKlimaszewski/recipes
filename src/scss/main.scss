@@ -28,7 +28,11 @@ body{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  position: relative;
+}
+
+.recipe__row-edit{
+  display: flex;
+  justify-content: flex-end;
 }
 
 .recipe__add{
@@ -104,4 +108,42 @@ body{
   &:nth-child(2n) {
     background: $second-color;
   }
+}
+
+.recipe__edit{
+  background: yellow;
+  border: none;
+  padding: 1em 2em;
+  font-weight: 700;
+  margin: 1em 0;
+}
+
+.recipe__delete{
+  background: red;
+  border: none;
+  padding: 1em 2em;
+  color: white;
+  font-weight: 700;
+  margin: 1em 0 1em 2em;
+}
+
+.recipe__form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  background: blue;
+}
+
+.recipe__form-description{
+  margin: 0;
+  color: white;
+}
+
+.recipe__form-input{
+  width: 70%;
+  border: 1px solid $main-color;
+  background: white;
+  color: black;
 }
