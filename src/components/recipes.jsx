@@ -40,6 +40,12 @@ export class Recipes extends React.Component {
     render() {
         if (this.state.loaded) {
             let recipes = this.state.recipes.map(function (el, i) {
+                let ingredients = el.ingredients.map(function (ing) {
+                    return <p className={"recipe__ingredients-item"}>{ing}</p>
+                })
+                let recipeSteps = el.recipeSteps.map(function (step) {
+                    return <li className="recipe__steps-list-item">{step}</li>
+                })
                 return <div className={"recipe"} key={i}>
                     <div className="recipe__row">
                         <div className="recipe__category" style={{backgroundColor: el.category}}></div>
@@ -50,9 +56,16 @@ export class Recipes extends React.Component {
                             <img src={el.photo} alt="See this? Please try to update photo address (url)."
                                  className="recipe__img"/>
                         </div>
-                        <div className="recipe__description">{el.description}</div>
+                        <div className="recipe__text">
+                            <h3 className={"recipe__ingredients-title"}>Ingredients:</h3>
+                            <div className="recipe__ingredients">{ingredients}</div>
+                        </div>
                     </div>
-                    <button className="recipe__add">+</button>
+                    <div className="recipe__row">
+                        <ul className={"recipe__steps-list"}>
+                            {recipeSteps}
+                        </ul>
+                    </div>
                 </div>
 
             })
@@ -61,6 +74,7 @@ export class Recipes extends React.Component {
                     <div className={"container"}>
                         <Header/>
                         {recipes}
+                        <button className="recipe__add">+</button>
                     </div>
                 )
             }
@@ -73,6 +87,7 @@ export class Recipes extends React.Component {
                         Your recipes list is empty. Maybe it's time to add some recipes? :)
                     </div>
                     <button className="recipe__add" onClick={this.handleAddRecipe}>+</button>
+
                 </div>
             )
         }

@@ -21,14 +21,14 @@ body{
 }
 
 .recipe{
-  background: rgba(0,0,0,0.3);
+  background: rgba(0,0,0,0.6);
 }
 
 .recipe__row{
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
+  position: relative;
 }
 
 .recipe__add{
@@ -75,9 +75,33 @@ body{
   height: 100%;
 }
 
-.recipe__description{
+.recipe__ingredients-title{
+  color: white;
+  font-weight: 700;
+}
+
+.recipe__ingredients{
   font-size: 1.2em;
   color: white;
   text-align: center;
   flex-basis: 40%;
+}
+
+.recipe__ingredients-item{
+  margin: 5px 0;
+  text-align: right;
+}
+
+.recipe__steps-list{
+  list-style-type: decimal;
+  color: white;
+  margin-top: 2em;
+  background: $main-color;
+  padding: 10px 30px;
+}
+
+.recipe__steps-list-item{
+  &:nth-child(2n) {
+    background: $second-color;
+  }
 }
