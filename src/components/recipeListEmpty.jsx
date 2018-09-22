@@ -17,7 +17,6 @@ export class RecipeListEmpty extends React.Component {
                 <div className="recipe">
                     Your recipes list is empty. Maybe it's time to add some recipes? :)
                 </div>
-                <button className="recipe__add" onClick={this.handleAddRecipe}>+</button>
                 <RecipeForm />
             </div>
         );

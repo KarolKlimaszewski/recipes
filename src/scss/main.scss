@@ -24,11 +24,13 @@ body{
 
 .recipe{
   background: rgba(0,0,0,0.6);
+  margin: 1.5em 0;
 }
 
 .recipe__row{
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 
 .recipe__row--main{
@@ -136,6 +138,9 @@ body{
 .recipe__show{
   background: white;
   padding: 10px 20px;
+  width: 5em;
+  text-align: center;
+  vertical-align: center;
   &:hover{
     cursor: pointer;
   }

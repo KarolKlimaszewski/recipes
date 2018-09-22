@@ -6889,13 +6889,16 @@ body {
   max-width: 1350px; }
 
 .recipe {
-  background: rgba(0, 0, 0, 0.6); }
+  background: rgba(0, 0, 0, 0.6);
+  margin: 1.5em 0; }
 
 .recipe__row {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-      justify-content: space-around; }
+      justify-content: space-around;
+  -ms-flex-align: center;
+      align-items: center; }
 
 .recipe__row--main {
   display: -ms-flexbox;
@@ -6988,6 +6991,9 @@ body {
 
 .recipe__show {
   background: white;
-  padding: 10px 20px; }
+  padding: 10px 20px;
+  width: 5em;
+  text-align: center;
+  vertical-align: center; }
   .recipe__show:hover {
     cursor: pointer; }
