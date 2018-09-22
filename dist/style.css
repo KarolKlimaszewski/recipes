@@ -6864,17 +6864,66 @@ a.text-dark:hover, a.text-dark:focus {
   width: 100%;
   -ms-flex-direction: column;
       flex-direction: column;
-  background: blue; }
+  background: rgba(75, 195, 121, 0.6);
+  padding: 2em; }
 
 .recipe__form-description {
   margin: 0;
-  color: white; }
+  font-size: 1.2em;
+  color: #361712; }
 
 .recipe__form-input {
   width: 70%;
   border: 1px solid #361712;
   background: white;
-  color: black; }
+  color: black;
+  margin: 0.5em; }
+
+.recipe__form-checkboxes {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  padding: 0.5em 0; }
+
+.recipe__form-checkbox {
+  position: absolute;
+  opacity: 0; }
+  .recipe__form-checkbox + label {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+    text-transform: capitalize; }
+  .recipe__form-checkbox + label:before {
+    content: '';
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 20px;
+    height: 20px;
+    background: white; }
+  .recipe__form-checkbox:hover + label:before {
+    background: #361712; }
+  .recipe__form-checkbox:focus + label:before {
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12); }
+  .recipe__form-checkbox:checked + label:before {
+    background: #361712; }
+  .recipe__form-checkbox:disabled + label {
+    color: #C8915B;
+    cursor: auto; }
+  .recipe__form-checkbox:disabled + label:before {
+    box-shadow: none;
+    background: #ddd; }
+  .recipe__form-checkbox:checked + label:after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 9px;
+    background: white;
+    width: 2px;
+    height: 2px;
+    box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
+    transform: rotate(45deg); }
 
 * {
   margin: 0;

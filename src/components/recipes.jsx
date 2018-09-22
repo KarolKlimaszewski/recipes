@@ -57,6 +57,9 @@ export class Recipes extends React.Component {
         e.preventDefault();
         const refDelete = firebase.database().ref("recipes/" + index.id);
         refDelete.remove();
+        this.setState({
+            activeRecipe: -1
+        })
     }
 
 

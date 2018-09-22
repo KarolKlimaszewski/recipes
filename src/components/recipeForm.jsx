@@ -10,8 +10,8 @@ export class RecipeForm extends React.Component {
             ingredients: "",
             photo: "",
             recipeSteps: "",
-            category: "red",
-            displayForm: "none"
+            category: [],
+            displayForm: "flex"
         }
     }
 
@@ -49,7 +49,7 @@ export class RecipeForm extends React.Component {
             photo: this.state.photo,
             recipeSteps: this.state.recipeSteps.split(";"),
             title: this.state.title,
-            category: "red"
+            category: this.state.category
         });
         this.setState({
             title: "",
@@ -63,18 +63,47 @@ export class RecipeForm extends React.Component {
     }
 
     handleFormDisplay = () => {
-        if(this.state.displayForm === "none") {
+        if (this.state.displayForm === "none") {
             this.setState({
                 displayForm: "flex"
             })
-        }else{
+        } else {
             this.setState({
                 displayForm: "none"
             })
         }
     }
 
+
     render() {
+        const checkboxes = [
+            {
+                name: 'snack',
+                value: 'snack',
+            },
+            {
+                name: 'breakfast',
+                value: 'breakfast',
+            },
+            {
+                name: 'dessert',
+                value: 'dessert',
+            },
+            {
+                name: 'dinner',
+                value: 'dinner',
+            },
+            {
+                name: 'drink',
+                value: 'drink',
+            },
+    ];
+        let checkbox = checkboxes.map(function (el) {
+            return <div>
+                <input className="recipe__form-checkbox" id={el.name} type="checkbox" value={el.value}/>
+                <label htmlFor={el.name}>{el.value}</label>
+            </div>
+        })
         return (<div>
                 <button className="recipe__add" onClick={this.handleFormDisplay}>+</button>
                 <form className="recipe__form" style={{display: this.state.displayForm}}>
@@ -84,6 +113,12 @@ export class RecipeForm extends React.Component {
                     <input className={"recipe__form-input"} type="text" placeholder={"Title..."}
                            value={this.state.title}
                            onChange={this.handleTitleChange}/>
+                    <p className="recipe__form-description">
+                        Category:
+                    </p>
+                    <div className="recipe__form-checkboxes">
+                        {checkbox}
+                    </div>
                     <p className="recipe__form-description">
                         Ingredients (separate them with a semicolon):
                     </p>

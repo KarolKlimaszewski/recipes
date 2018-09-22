@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e06ea1c-9c98-453f-bc71-e017a5abf8a0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/recipeListEmpty.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/recipeListEmpty.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/checkboxes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/recipeForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/recipeForm.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/recipes.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/recipes.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/recipeForm.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/recipeForm.scss" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -28,11 +31,11 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="html" value="3" />
-          <entry key="js" value="1" />
+          <entry key="js" value="2" />
           <entry key="json" value="3" />
           <entry key="jsx" value="29" />
           <entry key="md" value="6" />
-          <entry key="scss" value="9" />
+          <entry key="scss" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -40,25 +43,27 @@
           <entry key="HTML" value="3" />
           <entry key="JSON" value="3" />
           <entry key="JSX Harmony" value="29" />
-          <entry key="JavaScript" value="1" />
+          <entry key="JavaScript" value="2" />
           <entry key="Markdown" value="6" />
-          <entry key="SCSS" value="9" />
+          <entry key="SCSS" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="10" />
-          <entry key="jsx" value="5064" />
+          <entry key="js" value="33" />
+          <entry key="jsx" value="6004" />
           <entry key="md" value="177" />
-          <entry key="scss" value="3073" />
+          <entry key="scss" value="3561" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="10" />
-          <entry key="JSX Harmony" value="5064" />
+          <entry key="JSX Harmony" value="6004" />
+          <entry key="JavaScript" value="33" />
           <entry key="Markdown" value="177" />
-          <entry key="SCSS" value="3073" />
+          <entry key="SCSS" value="3561" />
         </counts>
       </usages-collector>
     </session>
@@ -77,11 +82,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/recipes.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="75" column="106" selection-start-line="75" selection-start-column="106" selection-end-line="75" selection-end-column="106" />
+            <state relative-caret-position="19">
+              <caret line="60" column="28" selection-start-line="60" selection-start-column="28" selection-end-line="60" selection-end-column="28" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -89,27 +94,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/recipeListEmpty.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="10" lean-forward="true" selection-start-column="10" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../kurs/WAR_FER_S_38_REACT_React/1_Zadania/Dzien_3/5_Zdarzenia_przekazywanie/js/zadanie01.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-228" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/recipeForm.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-211">
-              <caret line="64" column="25" lean-forward="true" selection-start-line="64" selection-start-column="25" selection-end-line="64" selection-end-column="25" />
+            <state relative-caret-position="302">
+              <caret line="99" column="4" lean-forward="true" selection-start-line="99" selection-start-column="4" selection-end-line="99" selection-end-column="4" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -118,13 +107,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../kurs/_PROJEKT KOŃCOWY/src/components/OperationAdd.jsx">
+        <entry file="file://$PROJECT_DIR$/src/scss/recipeForm.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1083">
-              <caret line="111" column="23" selection-start-line="104" selection-start-column="16" selection-end-line="111" selection-end-column="23" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="253">
+              <caret line="38" column="32" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -132,20 +118,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/scss/main.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../kurs/_PROJEKT KOŃCOWY/src/app.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="99" column="6" lean-forward="true" selection-start-line="90" selection-start-column="4" selection-end-line="99" selection-end-column="6" />
-              <folding>
-                <element signature="e#468#495#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="427">
+              <caret line="54" column="21" lean-forward="true" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -163,6 +137,9 @@
       <find>colon</find>
       <find>log</find>
       <find>add</find>
+      <find>show</find>
+      <find>rgba</find>
+      <find>recipe__ad</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -181,11 +158,12 @@
         <option value="$PROJECT_DIR$/../../kurs/_PROJEKT KOŃCOWY/src/sass/loader.scss" />
         <option value="$PROJECT_DIR$/src/scss/loader.scss" />
         <option value="$PROJECT_DIR$/src/components/loader.jsx" />
-        <option value="$PROJECT_DIR$/src/scss/recipeForm.scss" />
-        <option value="$PROJECT_DIR$/src/components/recipeForm.jsx" />
-        <option value="$PROJECT_DIR$/src/scss/main.scss" />
         <option value="$PROJECT_DIR$/src/components/recipeListEmpty.jsx" />
+        <option value="$PROJECT_DIR$/src/scss/main.scss" />
         <option value="$PROJECT_DIR$/src/components/recipes.jsx" />
+        <option value="$PROJECT_DIR$/src/scss/recipeForm.scss" />
+        <option value="$PROJECT_DIR$/src/components/checkboxes.js" />
+        <option value="$PROJECT_DIR$/src/components/recipeForm.jsx" />
       </list>
     </option>
   </component>
@@ -279,16 +257,15 @@
       <updated>1537460948675</updated>
       <workItem from="1537460950393" duration="7392000" />
       <workItem from="1537527811141" duration="10071000" />
-      <workItem from="1537622255403" duration="11235000" />
+      <workItem from="1537622255403" duration="15514000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28698000" />
+    <option name="totallyTimeSpent" value="32977000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24972677" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -452,23 +429,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scss/recipeForm.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../kurs/_PROJEKT KOŃCOWY/src/components/OperationAdd.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1083">
-          <caret line="111" column="23" selection-start-line="104" selection-start-column="16" selection-end-line="111" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../kurs/_PROJEKT KOŃCOWY/src/components/DateFilter.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
@@ -480,13 +440,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
           <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scss/main.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -510,10 +463,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/recipeForm.jsx">
+    <entry file="file://$PROJECT_DIR$/src/components/recipeListEmpty.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-211">
-          <caret line="64" column="25" lean-forward="true" selection-start-line="64" selection-start-column="25" selection-end-line="64" selection-end-column="25" />
+        <state>
+          <caret column="10" lean-forward="true" selection-start-column="10" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scss/main.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="54" column="21" lean-forward="true" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../kurs/_PROJEKT KOŃCOWY/src/components/OperationAdd.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1083">
+          <caret line="111" column="23" selection-start-line="104" selection-start-column="16" selection-end-line="111" selection-end-column="23" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -525,17 +492,30 @@
         <state relative-caret-position="-228" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/recipeListEmpty.jsx">
+    <entry file="file://$PROJECT_DIR$/src/components/recipes.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="10" lean-forward="true" selection-start-column="10" selection-end-column="10" />
+        <state relative-caret-position="19">
+          <caret line="60" column="28" selection-start-line="60" selection-start-column="28" selection-end-line="60" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/recipes.jsx">
+    <entry file="file://$PROJECT_DIR$/src/scss/recipeForm.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="75" column="106" selection-start-line="75" selection-start-column="106" selection-end-line="75" selection-end-column="106" />
+        <state relative-caret-position="253">
+          <caret line="38" column="32" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/checkboxes.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/recipeForm.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="99" column="4" lean-forward="true" selection-start-line="99" selection-start-column="4" selection-end-line="99" selection-end-column="4" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
