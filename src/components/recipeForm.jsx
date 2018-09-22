@@ -11,22 +11,9 @@ export class RecipeForm extends React.Component {
             photo: "",
             recipeSteps: "",
             category: "red",
-            displayForm: this.props.display
+            displayForm: "none"
         }
     }
-
-    componentDidMount() {
-        if (typeof this.props.display === 'function') {
-            if (this.state.displayForm === "none") {
-                this.props.display("flex");
-            }
-            else {
-                this.props.display("none");
-            }
-        }
-    }
-
-    //FORM
 
     handleTitleChange = (event) => {
         this.setState({
@@ -57,14 +44,22 @@ export class RecipeForm extends React.Component {
     handleSubmit = (event) => {
         event.preventDefault();
         let recipesRef = firebase.database().ref("recipes");
-        console.log(recipesRef);
         recipesRef.push({
-            ingredients: this.state.ingredients.split(","),
+            ingredients: this.state.ingredients.split(";"),
             photo: this.state.photo,
-            recipeSteps: this.state.recipeSteps.split(","),
+            recipeSteps: this.state.recipeSteps.split(";"),
             title: this.state.title,
             category: "red"
         });
+        this.setState({
+            title: "",
+            ingredients: "",
+            photo: "",
+            recipeSteps: "",
+            category: "",
+            displayForm: "none"
+
+        })
     }
 
     handleFormDisplay = () => {
@@ -90,7 +85,7 @@ export class RecipeForm extends React.Component {
                            value={this.state.title}
                            onChange={this.handleTitleChange}/>
                     <p className="recipe__form-description">
-                        Ingredients (separate them with a comma):
+                        Ingredients (separate them with a semicolon):
                     </p>
                     <input className={"recipe__form-input"} type="text" placeholder={"ingredients..."}
                            value={this.state.ingredients}
@@ -102,7 +97,7 @@ export class RecipeForm extends React.Component {
                            value={this.state.photo}
                            onChange={this.handlePhotoUrlChange}/>
                     <p className="recipe__form-description">
-                        Recipe steps (separate them with a comma):
+                        Recipe steps (separate them with a semicolon):
                     </p>
                     <input className={"recipe__form-input"} type="text" placeholder={"Recipe steps..."}
                            value={this.state.recipeSteps}

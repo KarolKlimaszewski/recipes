@@ -5,6 +5,7 @@ $additional-color: #4BC379;
 @import 'bootstrap/bootstrap';
 @import 'header.scss';
 @import 'loader.scss';
+@import 'recipeForm.scss';
 
 *{
   margin: 0;
@@ -23,13 +24,16 @@ body{
 
 .recipe{
   background: rgba(0,0,0,0.6);
-  position: relative;
 }
 
-.recipe__row, .recipe__row--main{
+.recipe__row{
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
+}
+
+.recipe__row--main{
+  display: flex;
+  justify-content: space-between;
 }
 
 .recipe__row-edit{
@@ -129,33 +133,9 @@ body{
   margin: 1em 0 1em 2em;
 }
 
-.recipe__form{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  flex-direction: column;
-  background: blue;
-}
-
-.recipe__form-description{
-  margin: 0;
-  color: white;
-}
-
-.recipe__form-input{
-  width: 70%;
-  border: 1px solid $main-color;
-  background: white;
-  color: black;
-}
-
 .recipe__show{
   background: white;
   padding: 10px 20px;
-  position: absolute;
-  top: 0;
-  left: 0;
   &:hover{
     cursor: pointer;
   }

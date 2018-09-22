@@ -6,6 +6,7 @@ import * as firebase from 'firebase';
 import {Header} from "./header.jsx";
 import {RecipeForm} from "./recipeForm.jsx";
 import {RecipeListEmpty} from "./recipeListEmpty.jsx";
+import {Loader} from "./loader.jsx";
 
 export class Recipes extends React.Component {
     constructor(props) {
@@ -13,7 +14,7 @@ export class Recipes extends React.Component {
         this.state = {
             recipes: [],
             loaded: false,
-            formDisplay: "flex",
+            showRecipe: "none"
         }
     }
 
@@ -36,6 +37,25 @@ export class Recipes extends React.Component {
         })
     }
 
+    handleShowRecipe = (e, el) => {
+        console.log(el);
+        if(this.state.showRecipe === "none") {
+            this.setState({
+                showRecipe: "flex"
+            })
+        }else{
+            this.setState({
+                showRecipe: "none"
+            })
+        }
+    }
+
+    handleDeleteElement = (e, index) => {
+        e.preventDefault();
+        const refDelete = firebase.database().ref("recipes/" + index.id);
+        refDelete.remove();
+    }
+
 
     render() {
         if (this.state.loaded) {
@@ -47,12 +67,12 @@ export class Recipes extends React.Component {
                     return <li className="recipe__steps-list-item">{step}</li>
                 })
                 return <div className={"recipe"} key={i}>
-                    <div className="recipe__show" onClick={e => this.handleShowRecipe(e, el)}>Show/hide</div>
                     <div className="recipe__row--main">
+                        <div className="recipe__show" onClick={e => this.handleShowRecipe(e, el)}>Show/hide</div>
                         <div className="recipe__category" style={{backgroundColor: el.category}}></div>
                         <h2 className="recipe__title">{el.title}</h2>
                     </div>
-                    <div className="recipe__row">
+                    <div className="recipe__row" style={{display: this.state.showRecipe}}>
                         <div className="recipe__photo">
                             <img src={el.photo} alt="See this? Please try to update photo address (url)."
                                  className="recipe__img"/>
@@ -62,14 +82,14 @@ export class Recipes extends React.Component {
                             <div className="recipe__ingredients">{ingredients}</div>
                         </div>
                     </div>
-                    <div className="recipe__row">
+                    <div className="recipe__row" style={{display: this.state.showRecipe}}>
                         <ul className={"recipe__steps-list"}>
                             {recipeSteps}
                         </ul>
                     </div>
-                    <div className="recipe__row recipe__row-edit">
+                    <div className="recipe__row recipe__row-edit" style={{display: this.state.showRecipe}}>
                         <button className="recipe__edit">Edit</button>
-                        <button className="recipe__delete">Delete</button>
+                        <button className="recipe__delete" onClick={e => this.handleDeleteElement(e, el)}>Delete</button>
                     </div>
                 </div>
             })
@@ -87,9 +107,7 @@ export class Recipes extends React.Component {
             }
         }
         else {
-            return <div className={"loader__box"}>
-                <div className={"loader"} />
-            </div>
+            return <Loader />
         }
     }
 }
