@@ -10,7 +10,19 @@ export class RecipeForm extends React.Component {
             ingredients: "",
             photo: "",
             recipeSteps: "",
-            category: "red"
+            category: "red",
+            displayForm: this.props.display
+        }
+    }
+
+    componentDidMount() {
+        if (typeof this.props.display === 'function') {
+            if (this.state.displayForm === "none") {
+                this.props.display("flex");
+            }
+            else {
+                this.props.display("none");
+            }
         }
     }
 
@@ -55,37 +67,51 @@ export class RecipeForm extends React.Component {
         });
     }
 
+    handleFormDisplay = () => {
+        if(this.state.displayForm === "none") {
+            this.setState({
+                displayForm: "flex"
+            })
+        }else{
+            this.setState({
+                displayForm: "none"
+            })
+        }
+    }
+
     render() {
-        return (
-            <form className="recipe__form" style={{display: this.state.addRecipeDisplay}}>
-                <p className="recipe__form-description">
-                    Your recipe title:
-                </p>
-                <input className={"recipe__form-input"} type="text" placeholder={"Title..."}
-                       value={this.state.title}
-                       onChange={this.handleTitleChange}/>
-                <p className="recipe__form-description">
-                    Ingredients (separate them with a comma):
-                </p>
-                <input className={"recipe__form-input"} type="text" placeholder={"ingredients..."}
-                       value={this.state.ingredients}
-                       onChange={this.handleIngredientsChange}/>
-                <p className="recipe__form-description">
-                    Photo Url:
-                </p>
-                <input className={"recipe__form-input"} type="text" placeholder={"Your photo URL..."}
-                       value={this.state.photo}
-                       onChange={this.handlePhotoUrlChange}/>
-                <p className="recipe__form-description">
-                    Recipe steps (separate them with a comma):
-                </p>
-                <input className={"recipe__form-input"} type="text" placeholder={"Recipe steps..."}
-                       value={this.state.recipeSteps}
-                       onChange={this.handleRecipeStepsChange}/>
-                <button type={"submit"} className={"addUser__submit"} onClick={this.handleSubmit}>
-                    Submit
-                </button>
-            </form>
+        return (<div>
+                <button className="recipe__add" onClick={this.handleFormDisplay}>+</button>
+                <form className="recipe__form" style={{display: this.state.displayForm}}>
+                    <p className="recipe__form-description">
+                        Your recipe title:
+                    </p>
+                    <input className={"recipe__form-input"} type="text" placeholder={"Title..."}
+                           value={this.state.title}
+                           onChange={this.handleTitleChange}/>
+                    <p className="recipe__form-description">
+                        Ingredients (separate them with a comma):
+                    </p>
+                    <input className={"recipe__form-input"} type="text" placeholder={"ingredients..."}
+                           value={this.state.ingredients}
+                           onChange={this.handleIngredientsChange}/>
+                    <p className="recipe__form-description">
+                        Photo Url:
+                    </p>
+                    <input className={"recipe__form-input"} type="text" placeholder={"Your photo URL..."}
+                           value={this.state.photo}
+                           onChange={this.handlePhotoUrlChange}/>
+                    <p className="recipe__form-description">
+                        Recipe steps (separate them with a comma):
+                    </p>
+                    <input className={"recipe__form-input"} type="text" placeholder={"Recipe steps..."}
+                           value={this.state.recipeSteps}
+                           onChange={this.handleRecipeStepsChange}/>
+                    <button type={"submit"} className={"addUser__submit"} onClick={this.handleSubmit}>
+                        Submit
+                    </button>
+                </form>
+            </div>
         );
     }
 }

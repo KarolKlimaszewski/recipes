@@ -13,14 +13,7 @@ export class Recipes extends React.Component {
         this.state = {
             recipes: [],
             loaded: false,
-            form: {},
-            title: "",
-            ingredients: "",
-            photo: "",
-            recipeSteps: "",
-            category: "red",
-            addRecipeDisplay: "flex",
-            recipeDisplay: "flex"
+            formDisplay: "flex",
         }
     }
 
@@ -41,30 +34,6 @@ export class Recipes extends React.Component {
                 });
             }
         })
-    }
-
-    handleAddRecipe = () => {
-        if(this.state.addRecipeDisplay === "none"){
-            this.setState({
-                addRecipeDisplay: "flex"
-            })
-        }
-        else{
-            this.setState({
-                addRecipeDisplay: "none"
-            })
-        }
-    }
-
-    handleShowRecipe = (e, index) => {
-        if (typeof this.props.passTo === 'function') {
-            if (this.state.recipeDisplay === "none") {
-                this.props.displayRecipe("flex");
-            }
-            else {
-                this.props.displayRecipe("none");
-            }
-        }
     }
 
 
@@ -109,14 +78,18 @@ export class Recipes extends React.Component {
                     <div className={"container"}>
                         <Header/>
                         {recipes}
-                        <button className="recipe__add" onClick={this.handleAddRecipe}>+</button>
                         <RecipeForm />
                     </div>
                 )
             }
+            else {
+                return <RecipeListEmpty />
+            }
         }
         else {
-            return <RecipeListEmpty />
+            return <div className={"loader__box"}>
+                <div className={"loader"} />
+            </div>
         }
     }
 }
