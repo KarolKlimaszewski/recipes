@@ -22,9 +22,10 @@ body{
 
 .recipe{
   background: rgba(0,0,0,0.6);
+  position: relative;
 }
 
-.recipe__row{
+.recipe__row, .recipe__row--main{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -146,4 +147,15 @@ body{
   border: 1px solid $main-color;
   background: white;
   color: black;
+}
+
+.recipe__show{
+  background: white;
+  padding: 10px 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  &:hover{
+    cursor: pointer;
+  }
 }
