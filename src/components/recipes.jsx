@@ -88,7 +88,7 @@ export class Recipes extends React.Component {
                         </ul>
                     </div>
                     <div className="recipe__row recipe__row-edit" style={{display: this.state.showRecipe}}>
-                        <button className="recipe__edit">Edit</button>
+                        {/*<button className="recipe__edit">Edit</button>*/}
                         <button className="recipe__delete" onClick={e => this.handleDeleteElement(e, el)}>Delete</button>
                     </div>
                 </div>
