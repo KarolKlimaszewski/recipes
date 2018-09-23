@@ -1,4 +1,4 @@
-# Recipes book made in react
+# RecipesApp book made in react
 
 ### Work in progress...
 

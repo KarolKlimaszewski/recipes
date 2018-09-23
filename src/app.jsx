@@ -15,7 +15,7 @@ firebase.initializeApp(config);
 
 require('./scss/main.scss');
 
-import {Recipes} from './components/recipes.jsx';
+import {RecipesApp} from './components/recipesApp.jsx';
 
 class App extends React.Component {
    constructor(props){
@@ -24,7 +24,7 @@ class App extends React.Component {
    }
    render() {
      return (
-     <Recipes />
+     <RecipesApp />
      )
    }
  }
@@ -36,4 +36,4 @@ document.addEventListener("DOMContentLoaded", function(){
     document.querySelector('#app')
   )
 
-})
+});
