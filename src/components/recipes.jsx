@@ -40,7 +40,6 @@ export class Recipes extends React.Component {
     }
 
     handleShowRecipe = (e, index) => {
-        console.log(e.target)
         if(this.state.showRecipe === "none") {
             this.setState({
                 activeRecipe: index,
@@ -74,7 +73,6 @@ export class Recipes extends React.Component {
                     return <li key={"recipeStep"+i} className="recipe__steps-list-item">{step}</li>
                 })
                 let categories = el.category.map(cat => {
-                    console.log(cat)
                     if(cat === "snack") {
                         return <div className="recipe__category" style={{backgroundColor: "red"}}>{cat}</div>
                     }else if(cat === "breakfast") {
