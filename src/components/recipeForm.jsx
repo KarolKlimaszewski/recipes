@@ -114,7 +114,7 @@ export class RecipeForm extends React.Component {
             },
         ];
         let checkbox = checkboxes.map((el, i) => {
-            return <div key={"checkbox" + i}>
+            return <div key={"checkbox" + i} className={"recipe__form-checkbox-container"}>
                 <input className="recipe__form-checkbox" id={el.name} type="checkbox" value={el.value}
                        onChange={this.handleCheckboxChange}/>
                 <label htmlFor={el.name}>{el.name}</label>

@@ -1,3 +1,15 @@
+.recipe__add{
+  margin-top: 50px;
+  border: none;
+  background: $additional-color;
+  width: 50px;
+  height: 50px;
+  font-size: 3em;
+  line-height: 50px;
+  color: white;
+  border-radius: 50%;
+}
+
 .recipe__form{
   display: flex;
   justify-content: center;
@@ -15,11 +27,16 @@
 }
 
 .recipe__form-input{
-  width: 70%;
   border: 1px solid $main-color;
   background: white;
   color: black;
   margin: 0.5em;
+  padding: 0.3em 0;
+  @media #{$large} {
+    width: 70%;
+    margin: 0.5em;
+    padding: 0;
+  }
 }
 
 .addUser__submit{
@@ -35,9 +52,14 @@
   padding: 0.5em 0;
 }
 
+.recipe__form-checkbox-container{
+  margin: 0.3em 0;
+}
+
 .recipe__form-checkbox{
     position: absolute; // take it out of document flow
     opacity: 0; // hide it
+
 
     & + label {
       position: relative;

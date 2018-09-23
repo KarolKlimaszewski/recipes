@@ -4,11 +4,14 @@ $second-color: #C8915B;
 $additional-color: #4BC379;
 
 //SCREEN SIZES
-$small: "576px";
-$medium: "768px";
-$large: "992px";
+$small: "screen and (min-width: 576px)";
+$mid: "screen and (min-width: 768px)";
+$large: "screen and (min-width: 992px)";
 
-@import 'bootstrap/bootstrap';
+//FONT:
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700');
+
+//PARTIALS:
 @import 'header.scss';
 @import 'loader.scss';
 @import 'recipeForm.scss';
@@ -23,8 +26,10 @@ $large: "992px";
 body{
   background: url("../../images/background.jpg");
   background-size: cover;
+  font-family: 'Roboto', sans-serif;
 }
 
 .container{
   max-width: 1350px;
+  margin: 0 auto;
 }
