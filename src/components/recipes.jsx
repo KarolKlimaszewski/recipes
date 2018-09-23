@@ -8,6 +8,7 @@ import {RecipeForm} from "./recipeForm.jsx";
 import {RecipeListEmpty} from "./recipeListEmpty.jsx";
 import {Loader} from "./loader.jsx";
 
+
 export class Recipes extends React.Component {
     constructor(props) {
         super(props);
@@ -66,18 +67,31 @@ export class Recipes extends React.Component {
     render() {
         if (this.state.loaded) {
             let recipes = this.state.recipes.map((el, i) => {
-                let ingredients = el.ingredients.map(ing => {
-                    return <p className={"recipe__ingredients-item"}>{ing}</p>
+                let ingredients = el.ingredients.map((ing, i) => {
+                    return <p key={"ingredient"+i} className={"recipe__ingredients-item"}>{ing}</p>
                 })
-                let recipeSteps = el.recipeSteps.map(step => {
-                    return <li className="recipe__steps-list-item">{step}</li>
+                let recipeSteps = el.recipeSteps.map((step, i) => {
+                    return <li key={"recipeStep"+i} className="recipe__steps-list-item">{step}</li>
                 })
-                console.log(el)
+                let categories = el.category.map(cat => {
+                    console.log(cat)
+                    if(cat === "snack") {
+                        return <div className="recipe__category" style={{backgroundColor: "red"}}>{cat}</div>
+                    }else if(cat === "breakfast") {
+                        return <div className="recipe__category" style={{backgroundColor: "green"}}>{cat}</div>
+                    }else if(cat === "dinner") {
+                        return <div className="recipe__category" style={{backgroundColor: "blue"}}>{cat}</div>
+                    }else if(cat === "dessert") {
+                        return <div className="recipe__category" style={{backgroundColor: "yellow"}}>{cat}</div>
+                    }else{
+                        return <div className="recipe__category" style={{backgroundColor: "brown"}}>{cat}</div>
+                    }
+                })
                 if(this.state.activeRecipe === el) {
-                    return <div className={"recipe"} key={i}>
+                    return <div className={"recipe"} key={"recipe"+i}>
                         <div className="recipe__row--main">
                             <div className="recipe__show" onClick={e => this.handleShowRecipe(e, el)}>Hide</div>
-                            <div className="recipe__category" style={{backgroundColor: el.category}}></div>
+                            <div className="recipe__categories">{categories}</div>
                             <h2 className="recipe__title">{el.title}</h2>
                         </div>
                         <div className="recipe__row" style={{display: this.state.showRecipe}}>
@@ -100,10 +114,10 @@ export class Recipes extends React.Component {
                         </div>
                     </div>
                 }else{
-                    return <div className={"recipe"} key={i}>
+                    return <div className={"recipe"} key={"recipe"+i}>
                         <div className="recipe__row--main">
                             <div className="recipe__show" onClick={e => this.handleShowRecipe(e, el)}>Show</div>
-                            <div className="recipe__category" style={{backgroundColor: el.category}}></div>
+                            <div className="recipe__categories">{categories}</div>
                             <h2 className="recipe__title">{el.title}</h2>
                         </div>
                         <div className="recipe__row" style={{display: "none"}}>

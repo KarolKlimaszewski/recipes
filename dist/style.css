@@ -6879,6 +6879,12 @@ a.text-dark:hover, a.text-dark:focus {
   color: black;
   margin: 0.5em; }
 
+.addUser__submit {
+  padding: 1em 2em;
+  color: white;
+  background: #361712;
+  border: #361712; }
+
 .recipe__form-checkboxes {
   display: -ms-flexbox;
   display: flex;
@@ -6972,18 +6978,23 @@ body {
   color: white;
   border-radius: 50%; }
 
+.recipe__categories {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center; }
+
 .recipe__category {
-  width: 3em;
   height: 3em;
+  padding: 0.1em;
   opacity: 0.7;
   margin-left: 15px;
-  transition: 0.5s; }
+  transition: 0.5s;
+  color: white; }
   .recipe__category:hover {
     opacity: 1; }
-    .recipe__category:hover:after {
-      content: "Category";
-      background: rgba(0, 0, 0, 0.3);
-      color: white; }
 
 .recipe__title {
   margin: 0.5em 2em;

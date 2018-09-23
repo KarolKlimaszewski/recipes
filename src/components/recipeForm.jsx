@@ -11,7 +11,7 @@ export class RecipeForm extends React.Component {
             photo: "",
             recipeSteps: "",
             category: [],
-            displayForm: "flex"
+            displayForm: "none"
         }
     }
 
@@ -62,6 +62,21 @@ export class RecipeForm extends React.Component {
         })
     }
 
+    handleCheckboxChange = (event) => {
+        if (this.state.category.includes(event.target.value)) {
+            let categoryArray = [...this.state.category];
+            let index = categoryArray.indexOf(event.target.value);
+            categoryArray.splice(index, 1);
+            this.setState({
+                category: categoryArray
+            })
+        } else {
+            this.setState({
+                category: [...this.state.category, event.target.value],
+            })
+        }
+    }
+
     handleFormDisplay = () => {
         if (this.state.displayForm === "none") {
             this.setState({
@@ -97,11 +112,12 @@ export class RecipeForm extends React.Component {
                 name: 'drink',
                 value: 'drink',
             },
-    ];
-        let checkbox = checkboxes.map(function (el) {
-            return <div>
-                <input className="recipe__form-checkbox" id={el.name} type="checkbox" value={el.value}/>
-                <label htmlFor={el.name}>{el.value}</label>
+        ];
+        let checkbox = checkboxes.map((el, i) => {
+            return <div key={"checkbox" + i}>
+                <input className="recipe__form-checkbox" id={el.name} type="checkbox" value={el.value}
+                       onChange={this.handleCheckboxChange}/>
+                <label htmlFor={el.name}>{el.name}</label>
             </div>
         })
         return (<div>
@@ -122,7 +138,7 @@ export class RecipeForm extends React.Component {
                     <p className="recipe__form-description">
                         Ingredients (separate them with a semicolon):
                     </p>
-                    <input className={"recipe__form-input"} type="text" placeholder={"ingredients..."}
+                    <input className={"recipe__form-input"} type="text" placeholder={"Ingredients..."}
                            value={this.state.ingredients}
                            onChange={this.handleIngredientsChange}/>
                     <p className="recipe__form-description">
