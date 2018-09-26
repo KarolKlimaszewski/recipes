@@ -30,6 +30,11 @@ export class Recipes extends React.Component {
         })
     }
 
+    handleSendRecipes = (e, index) => {
+        let recipes = this.state.recipes;
+        this.props.handleReadRecipes(recipes);
+    }
+
     handleShowRecipe = (e, index) => {
         if(this.state.showRecipe === "none") {
             this.setState({

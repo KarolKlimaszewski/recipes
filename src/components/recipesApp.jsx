@@ -43,7 +43,7 @@ export class RecipesApp extends React.Component {
                 return (
                     <div className={"container"}>
                         <Header/>
-                        <Recipes/>
+                        <Recipes handleReadRecipes={this.handleSendRecipes}/>
                         <RecipeForm />
                     </div>
                 )

@@ -114,46 +114,46 @@ export class RecipeForm extends React.Component {
             },
         ];
         let checkbox = checkboxes.map((el, i) => {
-            return <div key={"checkbox" + i} className={"recipe__form-checkbox-container"}>
-                <input className="recipe__form-checkbox" id={el.name} type="checkbox" value={el.value}
+            return <div key={"checkbox" + i} className={"form__checkbox-container"}>
+                <input className="form__checkbox" id={el.name} type="checkbox" value={el.value}
                        onChange={this.handleCheckboxChange}/>
                 <label htmlFor={el.name}>{el.name}</label>
             </div>
         })
         return (<div>
                 <button className="recipe__add" onClick={this.handleFormDisplay}>+</button>
-                <form className="recipe__form" style={{display: this.state.displayForm}}>
-                    <p className="recipe__form-description">
+                <form className="form" style={{display: this.state.displayForm}}>
+                    <p className="form__description">
                         Your recipe title:
                     </p>
-                    <input className={"recipe__form-input"} type="text" placeholder={"Title..."}
+                    <input className={"form__input"} type="text" placeholder={"Title..."}
                            value={this.state.title}
                            onChange={this.handleTitleChange}/>
-                    <p className="recipe__form-description">
+                    <p className="form__description">
                         Category:
                     </p>
-                    <div className="recipe__form-checkboxes">
+                    <div className="form__checkboxes">
                         {checkbox}
                     </div>
-                    <p className="recipe__form-description">
+                    <p className="form__description">
                         Ingredients (separate them with a semicolon):
                     </p>
-                    <input className={"recipe__form-input"} type="text" placeholder={"Ingredients..."}
+                    <input className={"form__input"} type="text" placeholder={"Ingredients..."}
                            value={this.state.ingredients}
                            onChange={this.handleIngredientsChange}/>
-                    <p className="recipe__form-description">
+                    <p className="form__description">
                         Photo Url:
                     </p>
-                    <input className={"recipe__form-input"} type="text" placeholder={"Your photo URL..."}
+                    <input className={"form__input"} type="text" placeholder={"Your photo URL..."}
                            value={this.state.photo}
                            onChange={this.handlePhotoUrlChange}/>
-                    <p className="recipe__form-description">
+                    <p className="form__description">
                         Recipe steps (separate them with a semicolon):
                     </p>
-                    <input className={"recipe__form-input"} type="text" placeholder={"Recipe steps..."}
+                    <input className={"form__input"} type="text" placeholder={"Recipe steps..."}
                            value={this.state.recipeSteps}
                            onChange={this.handleRecipeStepsChange}/>
-                    <button type={"submit"} className={"addUser__submit"} onClick={this.handleSubmit}>
+                    <button type={"submit"} className={"form__submit"} onClick={this.handleSubmit}>
                         Submit
                     </button>
                 </form>

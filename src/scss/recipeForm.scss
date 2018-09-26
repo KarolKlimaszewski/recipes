@@ -10,7 +10,7 @@
   border-radius: 50%;
 }
 
-.recipe__form{
+.form{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,13 +20,13 @@
   padding: 2em;
 }
 
-.recipe__form-description{
+.form__description{
   margin: 0;
   font-size: 1.2em;
   color: $main-color;
 }
 
-.recipe__form-input{
+.form__input{
   border: 1px solid $main-color;
   background: white;
   color: black;
@@ -39,24 +39,24 @@
   }
 }
 
-.addUser__submit{
+.form__submit{
   padding: 1em 2em;
   color: white;
   background: $main-color;
   border: $main-color;
 }
 
-.recipe__form-checkboxes{
+.form__checkboxes{
   display: flex;
   flex-direction: column;
   padding: 0.5em 0;
 }
 
-.recipe__form-checkbox-container{
+.form__checkbox-container{
   margin: 0.3em 0;
 }
 
-.recipe__form-checkbox{
+.form__checkbox{
     position: absolute; // take it out of document flow
     opacity: 0; // hide it
 
