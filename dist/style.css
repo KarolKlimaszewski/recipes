@@ -75,7 +75,7 @@
   color: white;
   border-radius: 50%; }
 
-.recipe__form {
+.form {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
@@ -88,48 +88,48 @@
   background: rgba(75, 195, 121, 0.6);
   padding: 2em; }
 
-.recipe__form-description {
+.form__description {
   margin: 0;
   font-size: 1.2em;
   color: #361712; }
 
-.recipe__form-input {
+.form__input {
   border: 1px solid #361712;
   background: white;
   color: black;
   margin: 0.5em;
   padding: 0.3em 0; }
   @media screen and (min-width: 992px) {
-    .recipe__form-input {
+    .form__input {
       width: 70%;
       margin: 0.5em;
       padding: 0; } }
 
-.addUser__submit {
+.form__submit {
   padding: 1em 2em;
   color: white;
   background: #361712;
   border: #361712; }
 
-.recipe__form-checkboxes {
+.form__checkboxes {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
   padding: 0.5em 0; }
 
-.recipe__form-checkbox-container {
+.form__checkbox-container {
   margin: 0.3em 0; }
 
-.recipe__form-checkbox {
+.form__checkbox {
   position: absolute;
   opacity: 0; }
-  .recipe__form-checkbox + label {
+  .form__checkbox + label {
     position: relative;
     cursor: pointer;
     padding: 0;
     text-transform: capitalize; }
-  .recipe__form-checkbox + label:before {
+  .form__checkbox + label:before {
     content: '';
     margin-right: 10px;
     display: inline-block;
@@ -137,19 +137,19 @@
     width: 20px;
     height: 20px;
     background: white; }
-  .recipe__form-checkbox:hover + label:before {
+  .form__checkbox:hover + label:before {
     background: #361712; }
-  .recipe__form-checkbox:focus + label:before {
+  .form__checkbox:focus + label:before {
     box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12); }
-  .recipe__form-checkbox:checked + label:before {
+  .form__checkbox:checked + label:before {
     background: #361712; }
-  .recipe__form-checkbox:disabled + label {
+  .form__checkbox:disabled + label {
     color: #C8915B;
     cursor: auto; }
-  .recipe__form-checkbox:disabled + label:before {
+  .form__checkbox:disabled + label:before {
     box-shadow: none;
     background: #ddd; }
-  .recipe__form-checkbox:checked + label:after {
+  .form__checkbox:checked + label:after {
     content: '';
     position: absolute;
     left: 5px;
@@ -162,7 +162,9 @@
 
 .recipe {
   background: rgba(0, 0, 0, 0.6);
-  margin: 1.5em 0; }
+  margin: 1em 0; }
+  .recipe:first-child {
+    margin: 0.5em 0; }
 
 .recipe__row {
   display: block;
@@ -279,6 +281,25 @@
   vertical-align: center; }
   .recipe__show:hover {
     cursor: pointer; }
+
+.sort {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  margin-top: 1em; }
+
+.sort__title {
+  color: #361712;
+  background: rgba(200, 145, 91, 0.5);
+  text-align: center; }
+
+.sort__show {
+  width: 10em;
+  padding: 0.5em 2em;
+  background: #4BC379;
+  border: none;
+  margin: 1em 0 0 0; }
 
 * {
   margin: 0;

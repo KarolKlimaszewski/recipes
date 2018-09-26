@@ -8,6 +8,7 @@ import {RecipeForm} from "./recipeForm.jsx";
 import {RecipeListEmpty} from "./recipeListEmpty.jsx";
 import {Loader} from "./loader.jsx";
 import {Recipes} from "./recipes.jsx";
+import {SortingMethods} from "./sortingmethods.jsx";
 
 
 export class RecipesApp extends React.Component {
@@ -43,6 +44,7 @@ export class RecipesApp extends React.Component {
                 return (
                     <div className={"container"}>
                         <Header/>
+                        <SortingMethods/>
                         <Recipes handleReadRecipes={this.handleSendRecipes}/>
                         <RecipeForm />
                     </div>
