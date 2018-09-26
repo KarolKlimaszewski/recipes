@@ -1,6 +1,7 @@
 import React from "react";
 
 import * as firebase from 'firebase';
+import {checkboxes} from './checkboxes.js';
 
 export class RecipeForm extends React.Component {
     constructor(props) {
@@ -56,7 +57,7 @@ export class RecipeForm extends React.Component {
             ingredients: "",
             photo: "",
             recipeSteps: "",
-            category: "",
+            category: [],
             displayForm: "none"
 
         })
@@ -91,33 +92,11 @@ export class RecipeForm extends React.Component {
 
 
     render() {
-        const checkboxes = [
-            {
-                name: 'snack',
-                value: 'snack',
-            },
-            {
-                name: 'breakfast',
-                value: 'breakfast',
-            },
-            {
-                name: 'dessert',
-                value: 'dessert',
-            },
-            {
-                name: 'dinner',
-                value: 'dinner',
-            },
-            {
-                name: 'drink',
-                value: 'drink',
-            },
-        ];
         let checkbox = checkboxes.map((el, i) => {
             return <div key={"checkbox" + i} className={"form__checkbox-container"}>
                 <input className="form__checkbox" id={el.name} type="checkbox" value={el.value}
                        onChange={this.handleCheckboxChange}/>
-                <label htmlFor={el.name}>{el.name}</label>
+                <label className={"form__label"} htmlFor={el.name}>{el.name}</label>
             </div>
         })
         return (<div>

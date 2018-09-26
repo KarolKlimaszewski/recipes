@@ -28,6 +28,8 @@ body{
   background: url("../../images/background.jpg");
   background-size: cover;
   font-family: 'Roboto', sans-serif;
+  min-height: 100vh;
+  min-width: 100vw;
 }
 
 .container{

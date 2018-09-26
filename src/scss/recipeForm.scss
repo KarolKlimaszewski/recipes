@@ -1,4 +1,4 @@
-.recipe__add{
+.recipe__add {
   margin-top: 50px;
   border: none;
   background: $additional-color;
@@ -10,23 +10,23 @@
   border-radius: 50%;
 }
 
-.form{
+.form {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   flex-direction: column;
-  background: rgba($additional-color,0.6);
+  background: rgba($additional-color, 0.6);
   padding: 2em;
 }
 
-.form__description{
+.form__description {
   margin: 0;
   font-size: 1.2em;
   color: $main-color;
 }
 
-.form__input{
+.form__input {
   border: 1px solid $main-color;
   background: white;
   color: black;
@@ -39,89 +39,88 @@
   }
 }
 
-.form__submit{
+.form__submit {
   padding: 1em 2em;
   color: white;
   background: $main-color;
   border: $main-color;
 }
 
-.form__checkboxes{
+.form__checkboxes {
   display: flex;
   flex-direction: column;
   padding: 0.5em 0;
 }
 
-.form__checkbox-container{
+.form__checkbox-container {
   margin: 0.3em 0;
 }
 
-.form__checkbox{
-    position: absolute; // take it out of document flow
-    opacity: 0; // hide it
+.form__checkbox {
+  position: absolute; // take it out of document flow
+  opacity: 0; // hide it
 
-
-    & + label {
-      position: relative;
-      cursor: pointer;
-      padding: 0;
-      text-transform: capitalize;
-    }
-
-    // Box.
-    & + label:before {
-      content: '';
-      margin-right: 10px;
-      display: inline-block;
-      vertical-align: text-top;
-      width: 20px;
-      height: 20px;
-      background: white;
-    }
-
-    // Box hover
-    &:hover + label:before {
-      background: $main-color;
-    }
-
-    // Box focus
-    &:focus + label:before {
-      box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
-    }
-
-    // Box checked
-    &:checked + label:before {
-      background: $main-color;
-    }
-
-    // Disabled state label.
-    &:disabled + label {
-      color: $second-color;
-      cursor: auto;
-    }
-
-    // Disabled box.
-    &:disabled + label:before {
-      box-shadow: none;
-      background: #ddd;
-    }
-
-    // Checkmark. Could be replaced with an image
-    &:checked + label:after {
-      content: '';
-      position: absolute;
-      left: 5px;
-      top: 9px;
-      background: white;
-      width: 2px;
-      height: 2px;
-      box-shadow:
-              2px 0 0 white,
-              4px 0 0 white,
-              4px -2px 0 white,
-              4px -4px 0 white,
-              4px -6px 0 white,
-              4px -8px 0 white;
-      transform: rotate(45deg);
-    }
+  & + .form__label {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+    text-transform: capitalize;
+    color: $main-color;
   }
+
+  // Box.
+  & + .form__label:before {
+    content: '';
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 20px;
+    height: 20px;
+    background: white;
+  }
+
+  // Box hover
+  &:hover + .form__label:before {
+    background: $main-color;
+  }
+
+  // Box focus
+  &:focus + .form__label:before {
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+  }
+
+  // Box checked
+  &:checked + .form__label:before {
+    background: $main-color;
+  }
+
+  // Disabled state label.
+  &:disabled + .form__label {
+    color: $second-color;
+    cursor: auto;
+  }
+
+  // Disabled box.
+  &:disabled + .form__label:before {
+    box-shadow: none;
+    background: #ddd;
+  }
+
+  // Checkmark. Could be replaced with an image
+  &:checked + .form__label:after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 9px;
+    background: white;
+    width: 2px;
+    height: 2px;
+    box-shadow: 2px 0 0 white,
+    4px 0 0 white,
+    4px -2px 0 white,
+    4px -4px 0 white,
+    4px -6px 0 white,
+    4px -8px 0 white;
+    transform: rotate(45deg);
+  }
+}

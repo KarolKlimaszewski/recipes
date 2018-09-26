@@ -30,18 +30,18 @@ export class Recipes extends React.Component {
         })
     }
 
-    handleSendRecipes = (e, index) => {
+    handleSendRecipes = () => {
         let recipes = this.state.recipes;
         this.props.handleReadRecipes(recipes);
     }
 
     handleShowRecipe = (e, index) => {
-        if(this.state.showRecipe === "none") {
+        if (this.state.showRecipe === "none") {
             this.setState({
                 activeRecipe: index,
                 showRecipe: "flex"
             })
-        }else{
+        } else {
             this.setState({
                 activeRecipe: -1,
                 showRecipe: "none"
@@ -61,26 +61,26 @@ export class Recipes extends React.Component {
     render() {
         let recipes = this.state.recipes.map((el, i) => {
             let ingredients = el.ingredients.map((ing, i) => {
-                return <p key={"ingredient"+i} className={"recipe__ingredients-item"}>{ing}</p>
+                return <p key={"ingredient" + i} className={"recipe__ingredients-item"}>{ing}</p>
             })
             let recipeSteps = el.recipeSteps.map((step, i) => {
-                return <li key={"recipeStep"+i} className="recipe__steps-list-item">{step}</li>
+                return <li key={"recipeStep" + i} className="recipe__steps-list-item">{step}</li>
             })
             let categories = el.category.map(cat => {
-                if(cat === "snack") {
+                if (cat === "snack") {
                     return <div className="recipe__category" style={{backgroundColor: "red"}}>{cat}</div>
-                }else if(cat === "breakfast") {
+                } else if (cat === "breakfast") {
                     return <div className="recipe__category" style={{backgroundColor: "green"}}>{cat}</div>
-                }else if(cat === "dinner") {
+                } else if (cat === "dinner") {
                     return <div className="recipe__category" style={{backgroundColor: "blue"}}>{cat}</div>
-                }else if(cat === "dessert") {
+                } else if (cat === "dessert") {
                     return <div className="recipe__category" style={{backgroundColor: "yellow"}}>{cat}</div>
-                }else{
+                } else {
                     return <div className="recipe__category" style={{backgroundColor: "brown"}}>{cat}</div>
                 }
             })
-            if(this.state.activeRecipe === el) {
-                return <div className={"recipe"} key={"recipe"+i}>
+            if (this.state.activeRecipe === el) {
+                return <div className={"recipe"} key={"recipe" + i}>
                     <div className="recipe__row--main">
                         <div className="recipe__show" onClick={e => this.handleShowRecipe(e, el)}>Hide</div>
                         <div className="recipe__categories">{categories}</div>
@@ -102,11 +102,12 @@ export class Recipes extends React.Component {
                         </ul>
                     </div>
                     <div className="recipe__row recipe__row-edit" style={{display: this.state.showRecipe}}>
-                        <button className="recipe__delete" onClick={e => this.handleDeleteElement(e, el)}>Delete</button>
+                        <button className="recipe__delete" onClick={e => this.handleDeleteElement(e, el)}>Delete
+                        </button>
                     </div>
                 </div>
-            }else{
-                return <div className={"recipe"} key={"recipe"+i}>
+            } else {
+                return <div className={"recipe"} key={"recipe" + i}>
                     <div className="recipe__row--main">
                         <div className="recipe__show" onClick={e => this.handleShowRecipe(e, el)}>Show</div>
                         <div className="recipe__categories">{categories}</div>
@@ -128,7 +129,8 @@ export class Recipes extends React.Component {
                         </ul>
                     </div>
                     <div className="recipe__row recipe__row-edit" style={{display: "none"}}>
-                        <button className="recipe__delete" onClick={e => this.handleDeleteElement(e, el)}>Delete</button>
+                        <button className="recipe__delete" onClick={e => this.handleDeleteElement(e, el)}>Delete
+                        </button>
                     </div>
                 </div>
             }

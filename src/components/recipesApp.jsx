@@ -44,7 +44,7 @@ export class RecipesApp extends React.Component {
                 return (
                     <div className={"container"}>
                         <Header/>
-                        <SortingMethods/>
+                        <SortingMethods handleReadRecipes={this.handleSendRecipes}/>
                         <Recipes handleReadRecipes={this.handleSendRecipes}/>
                         <RecipeForm />
                     </div>
