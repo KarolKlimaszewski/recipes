@@ -8,14 +8,15 @@ import {RecipeForm} from "./recipeForm.jsx";
 import {RecipeListEmpty} from "./recipeListEmpty.jsx";
 import {Loader} from "./loader.jsx";
 import {Recipes} from "./recipes.jsx";
-import {SortingMethods} from "./sortingmethods.jsx";
+import {Filters} from "./filters.jsx";
 
 
 export class RecipesApp extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            loaded: false
+            loaded: false,
+            categoryFilter: "",
         }
     }
 
@@ -38,13 +39,20 @@ export class RecipesApp extends React.Component {
         })
     }
 
+    handlePassCategories = (arg) => {
+        this.setState({
+            categoryFilter: arg.categoryFilter
+        })
+    }
+
+
     render() {
         if (this.state.loaded) {
             if (this.state.recipes.length >= 1) {
                 return (
                     <div className={"container"}>
                         <Header/>
-                        <SortingMethods handleReadRecipes={this.handleSendRecipes}/>
+                        <Filters handleReadRecipes={this.handleSendRecipes} categories={this.handlePassCategories}/>
                         <Recipes handleReadRecipes={this.handleSendRecipes}/>
                         <RecipeForm />
                     </div>

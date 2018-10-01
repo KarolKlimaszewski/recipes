@@ -1,15 +1,15 @@
-.sort{
+.filter{
   display: flex;
   flex-direction: column;
   margin-top: 1em;
   background: rgba($second-color, 0.5);
 }
 
-.sort__title{
+.filter__title{
   color: $main-color;
 }
 
-.sort__show{
+.filter__show{
   width: 10em;
   padding: 0.5em 2em;
   background: $additional-color;
@@ -17,31 +17,32 @@
   color: white;
 }
 
-.sort__checkboxes{
+.filter__checkboxes{
   display: flex;
   flex-direction: column;
   padding: 0.5em 0;
 }
 
-.sort__checkbox-container{
+.filter__checkbox-container{
   margin: 0.3em 0;
 }
 
-.sort__run{
+.filter__run, .filter__clear{
   width: 15em;
   padding: 0.5em 2em;
+  margin: 0.5em 0;
   background: $additional-color;
   border: none;
   color: white;
   align-self: center;
 }
 
-.sort__checkbox {
+.filter__checkbox {
   position: absolute;
   opacity: 0;
 
 
-  & + .sort__label {
+  & + .filter__label {
     position: relative;
     cursor: pointer;
     padding: 0;
@@ -49,7 +50,7 @@
   }
 
   // Box.
-  & + .sort__label:before {
+  & + .filter__label:before {
     content: '';
     margin-right: 10px;
     display: inline-block;
@@ -60,34 +61,34 @@
   }
 
   // Box hover
-  &:hover + .sort__label:before {
+  &:hover + .filter__label:before {
     background: $main-color;
   }
 
   // Box focus
-  &:focus + .sort__label:before {
+  &:focus + .filter__label:before {
     box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
   }
 
   // Box checked
-  &:checked + .sort__label:before {
+  &:checked + .filter__label:before {
     background: $main-color;
   }
 
   // Disabled state label.
-  &:disabled + .sort__label {
+  &:disabled + .filter__label {
     color: $second-color;
     cursor: auto;
   }
 
   // Disabled box.
-  &:disabled + .sort__label:before {
+  &:disabled + .filter__label:before {
     box-shadow: none;
     background: #ddd;
   }
 
   // Checkmark. Could be replaced with an image
-  &:checked + .sort__label:after {
+  &:checked + .filter__label:after {
     content: '';
     position: absolute;
     left: 5px;

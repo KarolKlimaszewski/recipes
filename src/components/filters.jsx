@@ -2,14 +2,13 @@ import React from 'react';
 import * as firebase from 'firebase';
 import {checkboxes} from "./checkboxes";
 
-export class SortingMethods extends React.Component {
+export class Filters extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             displaySorting: "flex",
             recipes: this.props.handleReadRecipes,
             categoryFilter: [],
-            sortedRecipes: [],
         }
     }
 
@@ -58,44 +57,46 @@ export class SortingMethods extends React.Component {
         }
     }
 
-    // handleLaunchFilters = () => {
-    //     let recipesArr = [];
-    //     let recipesCategories = this.state.recipes.map((el) => {
-    //         recipesArr.push(el.category);
-    //     })
-    //     let categoriesToggled = this.state.categoryFilter.map((cat) => {
-    //         if(recipesArr.includes(cat)) {
-    //             console.log("includes")
-    //         }
-    //         return cat;
-    //     })
-    // }
+    handleLaunchFilters = () => {
+        if (typeof this.props.categories === 'function') {
+            this.props.categories({
+                categoryFilter: this.state.categoryFilter
+            })
+        }
+    }
+
+    handleClearFilters = () => {
+        this.setState({
+            categoryFilter: ""
+        })
+    }
 
     render() {
         let checkbox = checkboxes.map((el, i) => {
-            return <div key={"sortCheckbox" + i} className={"sort__checkbox-container"}>
-                <input className="sort__checkbox" id={el.sortValue} type="checkbox" value={el.value}
+            return <div key={"filterCheckbox" + i} className={"filter__checkbox-container"}>
+                <input className="filter__checkbox" id={el.sortValue} type="checkbox" value={el.value}
                        onChange={this.handleCategoryChange}/>
-                <label className={"sort__label"} htmlFor={el.sortValue}>{el.name}</label>
+                <label className={"filter__label"} htmlFor={el.sortValue}>{el.name}</label>
             </div>
         });
         if (this.state.displaySorting === "none") {
             return (
-                <div className={"sort"}>
-                    <button className="sort__show" onClick={this.handleShowSorting}>Show filters</button>
+                <div className={"filter"}>
+                    <button className="filter__show" onClick={this.handleShowSorting}>Show filters</button>
                 </div>
             );
         } else {
             return (
-                <div className={"sort"}>
-                    <button className="sort__show" onClick={this.handleShowSorting}>Hide filters</button>
-                    <h2 className="sort__title">
+                <div className={"filter"}>
+                    <button className="filter__show" onClick={this.handleShowSorting}>Hide filters</button>
+                    <h2 className="filter__title">
                         Category:
                     </h2>
-                    <div className="sort__checkboxes">
+                    <div className="filter__checkboxes">
                         {checkbox}
                     </div>
-                    <button className="sort__run" onClick={this.handleLaunchFilters}>Launch sorting methods</button>
+                    <button className="filter__run" onClick={this.handleLaunchFilters}>Launch filtering methods</button>
+                    <button className="filter__clear" onClick={this.handleClearFilters}>Clear filters</button>
                 </div>
             )
         }
