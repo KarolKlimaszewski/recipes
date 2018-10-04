@@ -3,12 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="1e06ea1c-9c98-453f-bc71-e017a5abf8a0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/npm-debug.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/recipes.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/recipes.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/loader.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/loader.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/recipesApp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/recipesApp.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sortingmethods.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/filters.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/main.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/sort.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/filter.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/loader.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/loader.scss" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,27 +20,29 @@
     <session id="969892371">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.16" value="3" />
+          <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.25" value="1" />
           <entry key="project.open.time.27" value="1" />
-          <entry key="project.open.time.3" value="1" />
-          <entry key="project.opened" value="10" />
+          <entry key="project.open.time.3" value="2" />
+          <entry key="project.opened" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="1" />
+          <entry key="gitignore" value="1" />
           <entry key="html" value="4" />
-          <entry key="js" value="12" />
+          <entry key="js" value="13" />
           <entry key="json" value="5" />
-          <entry key="jsx" value="61" />
-          <entry key="md" value="8" />
-          <entry key="scss" value="23" />
+          <entry key="jsx" value="65" />
+          <entry key="md" value="9" />
+          <entry key="scss" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -51,51 +50,60 @@
           <entry key="CSS" value="1" />
           <entry key="HTML" value="4" />
           <entry key="JSON" value="5" />
-          <entry key="JSX Harmony" value="61" />
-          <entry key="JavaScript" value="12" />
-          <entry key="Markdown" value="8" />
-          <entry key="SCSS" value="23" />
+          <entry key="JSX Harmony" value="65" />
+          <entry key="JavaScript" value="13" />
+          <entry key="Markdown" value="9" />
+          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="SCSS" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+          <entry key="gitignore" value="5" />
           <entry key="html" value="10" />
           <entry key="js" value="306" />
-          <entry key="jsx" value="10641" />
-          <entry key="md" value="250" />
-          <entry key="scss" value="5241" />
+          <entry key="jsx" value="10662" />
+          <entry key="md" value="325" />
+          <entry key="scss" value="5273" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="10" />
-          <entry key="JSX Harmony" value="10641" />
+          <entry key="JSX Harmony" value="10662" />
           <entry key="JavaScript" value="306" />
-          <entry key="Markdown" value="250" />
-          <entry key="SCSS" value="5241" />
+          <entry key="Markdown" value="325" />
+          <entry key="PLAIN_TEXT" value="5" />
+          <entry key="SCSS" value="5273" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/recipesApp.jsx">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/loader.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-152">
-              <caret line="30" column="24" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="95">
+              <caret line="5" column="41" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/scss/loader.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/filters.jsx">
+        <entry file="file://$PROJECT_DIR$/src/components/recipesApp.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="61" column="33" selection-start-line="61" selection-start-column="33" selection-end-line="61" selection-end-column="33" />
+            <state relative-caret-position="266">
+              <caret line="22" column="4" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="39" selection-end-column="8" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -143,8 +151,6 @@
         <option value="$PROJECT_DIR$/src/index.html" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/../../kurs/_PROJEKT KOŃCOWY/src/sass/loader.scss" />
-        <option value="$PROJECT_DIR$/src/scss/loader.scss" />
-        <option value="$PROJECT_DIR$/src/components/loader.jsx" />
         <option value="$PROJECT_DIR$/src/components/recipeHeader.jsx" />
         <option value="$PROJECT_DIR$/src/components/recipe.jsx" />
         <option value="$PROJECT_DIR$/src/components/recipesItem.jsx" />
@@ -163,8 +169,12 @@
         <option value="$PROJECT_DIR$/src/scss/sort.scss" />
         <option value="$PROJECT_DIR$/src/components/recipes.jsx" />
         <option value="$PROJECT_DIR$/src/components/filters.jsx" />
-        <option value="$PROJECT_DIR$/src/components/recipesApp.jsx" />
         <option value="$PROJECT_DIR$/../treehouse/README.md" />
+        <option value="$PROJECT_DIR$/../currency_exchanger/.gitignore" />
+        <option value="$PROJECT_DIR$/../currency_exchanger/README.md" />
+        <option value="$PROJECT_DIR$/src/components/recipesApp.jsx" />
+        <option value="$PROJECT_DIR$/src/components/loader.jsx" />
+        <option value="$PROJECT_DIR$/src/scss/loader.scss" />
       </list>
     </option>
   </component>
@@ -196,7 +206,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -225,6 +234,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -266,16 +276,19 @@
       <workItem from="1537964357629" duration="1020000" />
       <workItem from="1537965405264" duration="8401000" />
       <workItem from="1538040357949" duration="3955000" />
+      <workItem from="1538401623220" duration="859000" />
+      <workItem from="1538660661520" duration="271000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60922000" />
+    <option name="totallyTimeSpent" value="62052000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
+    <frame x="71" y="25" width="1849" height="1055" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24972677" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24972618" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -289,7 +302,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32972974" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32972974" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -404,13 +417,6 @@
     <entry file="file://$PROJECT_DIR$/src/components/recipeSteps.jsx" />
     <entry file="file://$PROJECT_DIR$/src/components/recipeOptions.jsx" />
     <entry file="file://$PROJECT_DIR$/src/components/recipeHeader.jsx" />
-    <entry file="file://$PROJECT_DIR$/src/components/loader.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="45" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/header.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
@@ -418,27 +424,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../website/src/scss/style.scss">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../website/src/scss/_variables.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../website/src/scss/style.scss" />
+    <entry file="file://$PROJECT_DIR$/../website/src/scss/_variables.scss" />
     <entry file="file://$PROJECT_DIR$/src/scss/header.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="24" column="19" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scss/loader.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -465,13 +456,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/recipeListEmpty.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/sortCheckboxes.jsx" />
     <entry file="file://$PROJECT_DIR$/../../kurs/WAR_FER_S_38_JavaScript/1_Zadania/Dzien_1/1_Tablice/index.html">
       <provider selected="true" editor-type-id="text-editor" />
@@ -488,13 +472,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="109" column="1" lean-forward="true" selection-end-line="129" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/checkboxes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="22" lean-forward="true" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -519,16 +496,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/recipeForm.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="19" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/scss/filter.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
@@ -540,9 +507,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
           <caret line="32" column="4" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -557,19 +521,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
           <caret line="140" column="89" selection-start-line="140" selection-start-column="31" selection-end-line="140" selection-end-column="89" />
-          <folding>
-            <element signature="e#468#495#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/filters.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="61" column="33" selection-start-line="61" selection-start-column="33" selection-end-line="61" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -583,13 +534,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/recipesApp.jsx">
+    <entry file="file://$PROJECT_DIR$/src/components/filters.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-152">
-          <caret line="30" column="24" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
+        <state relative-caret-position="760">
+          <caret line="70" column="10" lean-forward="true" selection-start-line="70" selection-start-column="10" selection-end-line="70" selection-end-column="10" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../currency_exchanger/.gitignore" />
+    <entry file="file://$PROJECT_DIR$/../currency_exchanger/README.md" />
+    <entry file="file://$PROJECT_DIR$/src/components/checkboxes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="22" lean-forward="true" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/recipeListEmpty.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/recipeForm.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="7" column="19" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/recipesApp.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="22" column="4" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="39" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/loader.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="41" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scss/loader.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
         </state>
       </provider>
     </entry>
